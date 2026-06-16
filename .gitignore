@@ -8,3 +8,5 @@ data/
 *.parquet
 tmp_parquet/
 .ipynb_checkpoints/
+.DS_Store
+.DS_Store
