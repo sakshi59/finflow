@@ -1,0 +1,25 @@
+[2026-07-01T19:48:43.291+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-07-01T19:48:43.299+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: finflow_pipeline.quality_check manual__2026-07-01T19:48:38.676992+00:00 [queued]>
+[2026-07-01T19:48:43.302+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: finflow_pipeline.quality_check manual__2026-07-01T19:48:38.676992+00:00 [queued]>
+[2026-07-01T19:48:43.302+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2026-07-01T19:48:43.307+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): quality_check> on 2026-07-01 19:48:38.676992+00:00
+[2026-07-01T19:48:43.310+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=383) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-07-01T19:48:43.311+0000] {standard_task_runner.py:63} INFO - Started process 384 to run task
+[2026-07-01T19:48:43.311+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'finflow_pipeline', 'quality_check', 'manual__2026-07-01T19:48:38.676992+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/finflow_pipeline.py', '--cfg-path', '/tmp/tmpptxwg67t']
+[2026-07-01T19:48:43.312+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask quality_check
+[2026-07-01T19:48:43.330+0000] {task_command.py:426} INFO - Running <TaskInstance: finflow_pipeline.quality_check manual__2026-07-01T19:48:38.676992+00:00 [running]> on host 22b579d022fd
+[2026-07-01T19:48:43.357+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='sakshi' AIRFLOW_CTX_DAG_ID='finflow_pipeline' AIRFLOW_CTX_TASK_ID='quality_check' AIRFLOW_CTX_EXECUTION_DATE='2026-07-01T19:48:38.676992+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-01T19:48:38.676992+00:00'
+[2026-07-01T19:48:43.358+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-07-01T19:48:43.363+0000] {logging_mixin.py:188} INFO - Running data quality checks...
+[2026-07-01T19:48:43.363+0000] {logging_mixin.py:188} INFO - Checking row counts match expectations...
+[2026-07-01T19:48:43.363+0000] {logging_mixin.py:188} INFO - Checking no nulls in critical columns...
+[2026-07-01T19:48:43.363+0000] {logging_mixin.py:188} INFO - Checking fraud rate within expected range (0.1% - 1.0%)...
+[2026-07-01T19:48:43.363+0000] {logging_mixin.py:188} INFO - All quality checks passed
+[2026-07-01T19:48:43.363+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-07-01T19:48:43.364+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-07-01T19:48:43.367+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=finflow_pipeline, task_id=quality_check, run_id=manual__2026-07-01T19:48:38.676992+00:00, execution_date=20260701T194838, start_date=20260701T194843, end_date=20260701T194843
+[2026-07-01T19:48:43.411+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-07-01T19:48:43.419+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-01T19:48:43.419+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
